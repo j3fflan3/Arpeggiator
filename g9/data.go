@@ -316,6 +316,8 @@ To extrapolate the duration of other note types, you need to use this calculatio
 Example: To calculate a dotted whole note divisor, divide the dotted whole's numeric representation by 1:
 1.5 / 1 = 0.666666666666667
 
+Now we need a calculation to determine the target note's duration.
+
       WHOTE NOTE                     Denominator
 duration = ((SecondsInMinute / bpm) * divisor) / targetNoteDivisor
 
@@ -333,16 +335,11 @@ func (nd TNoteDuration) SetDuration(denominator NoteType, bpm float64) error {
 		return fmt.Errorf("the maximum dividend %v must be divisible without remainder by denominator %v", MxD, denominator)
 	}
 	d.IsDenominator = true
-	level := d.NumericValue
 	denominatorDuration := 60 / bpm
 	denominatorDivisor := d.Divisor
-	wholeNoteDivisor := denominatorDuration * d.Divisor
 	d.Duration = denominatorDuration
 
 	nd[denominator] = d
-	fmt.Println("level:", level, "wholeNoteDivisor:", wholeNoteDivisor)
-	// First, after you calculate the duration of the denominator, set the value
-	// of the WholeNote (if it isn't the denominator itself)
 	for k, v := range nd {
 		if k != denominator {
 			v.Duration = calcNoteDuration(bpm, denominatorDivisor, v.Divisor)
@@ -352,9 +349,6 @@ func (nd TNoteDuration) SetDuration(denominator NoteType, bpm float64) error {
 			nd[k] = v
 		}
 	}
-	// Second, given the seconds value of the WholeNote, you can then multiply
-	// those seconds by the NumericValue of each note type to get their value
-	// relative to the tempo (Beats Per Minute, aka BPM)
 	return nil
 }
 
