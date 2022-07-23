@@ -1,0 +1,37 @@
+note, value	symbol	length in seconds
+one and a half
+1½
+1.5	one and a half note	2.57142857
+whole
+
+1	whole note	1.71428571
+three quarters
+3/4
+0.75	three quarters note	1.28571429
+half
+1/2
+0.5	half note	0.85714286
+three eighth
+3/8
+0.375	three eighth note	0.64285714
+quarter
+1/4
+0.25	quarter note	0.42857143
+three sixteenth
+3/16
+0.1875	three sixteenth note	0.32142857
+eighth
+1/8
+0.125	eighth note	0.21428571
+three thirty-second
+3/32
+0.09375	three thirty-second note	0.16071429
+sixteenth
+1/16
+0.0625	sixteenth note	0.10714286
+three sixty-fourth
+3/64
+0.046875	three sixty-fourth note	0.08035714
+thirty-second
+1/32
+0.03125	thirty-second note	0.05357143
