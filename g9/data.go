@@ -33,12 +33,15 @@ const (
 	Half               NoteType = "half"               // Half note
 	QuarterDotted      NoteType = "quarterdotted"      // quarter note * 1.5
 	Quarter            NoteType = "quarter"            // Quarter note
+	Fifth              NoteType = "fifth"              // Quintuplets... five beats per measure where time signature is 4/4
 	Sixth              NoteType = "sixth"              // represents quarter note triplet
 	EighthDotted       NoteType = "eighthdotted"       // eighth note * 1.5
 	Eighth             NoteType = "eighth"             // eighth note
+	Tenth              NoteType = "tenth"              // Quintuplets for eighth notes, e.g. where time signature is 4/4
 	Twelfth            NoteType = "twelfth"            // represents eighth note triplet
 	SixteenthDotted    NoteType = "sixteenthdotted"    // sixteenth note * 1.5
 	Sixteenth          NoteType = "sixteenth"          // sixteenth note
+	Twentieth          NoteType = "twentieth"          // quintuplets for sixteenth notes, e.g., when time signature is 4/4
 	Twentyfourth       NoteType = "twentyfourth"       // represents sixteenth note triplet
 	ThirtysecondDotted NoteType = "thirtyseconddotted" // thirtysecond note * 1.5
 	Thirtysecond       NoteType = "thirtysecond"       // thirtysecond note
@@ -225,6 +228,13 @@ var NoteDuration TNoteDuration = TNoteDuration{
 		Divisor:       4,
 		IsDenominator: false,
 	}, // quarter
+	Fifth: {
+		Duration:      0,
+		Denominator:   false,
+		NumericValue:  0.2,
+		Divisor:       5,
+		IsDenominator: false,
+	},
 	Sixth: {
 		Duration:      0,
 		Denominator:   false, // True means this note can be used as a denominator
@@ -246,6 +256,13 @@ var NoteDuration TNoteDuration = TNoteDuration{
 		Divisor:       8,
 		IsDenominator: false,
 	}, // eighth
+	Tenth: {
+		Duration:      0,
+		Denominator:   false,
+		NumericValue:  0.1,
+		Divisor:       10,
+		IsDenominator: false,
+	},
 	Twelfth: {
 		Duration:      0,
 		Denominator:   false, // True means this note can be used as a denominator
@@ -267,6 +284,13 @@ var NoteDuration TNoteDuration = TNoteDuration{
 		Divisor:       16,
 		IsDenominator: false,
 	}, // sixteenth
+	Twentieth: {
+		Duration:      0,
+		Denominator:   false,
+		NumericValue:  .05,
+		Divisor:       20,
+		IsDenominator: false,
+	},
 	Twentyfourth: {
 		Duration:      0,
 		Denominator:   false, // True means this note can be used as a denominator
