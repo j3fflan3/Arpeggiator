@@ -10,3 +10,6 @@ github.com/pkg/errors
 github.com/timiskhakov/music/guitar
 github.com/timiskhakov/music/karplusstrong
 github.com/timiskhakov/music/song
+# gopkg.in/yaml.v3 v3.0.1
+## explicit
+gopkg.in/yaml.v3
