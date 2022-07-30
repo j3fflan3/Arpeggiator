@@ -50,6 +50,11 @@ const (
 	SecondsInMinute float64 = 60
 )
 
+type TimeSignature struct {
+	Numerator   NoteType
+	Denominator NoteType
+}
+
 var NoteMap map[string]*Note = map[string]*Note{
 	Cnatural: &C,
 	Csharp:   &Db,
