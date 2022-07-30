@@ -8,10 +8,10 @@ type NoteType string
 
 const (
 	// Note names
-	Cnatural string = "C"
-	Csharp   string = "C#"
-	Dflat    string = "Db"
-	Dnatural string = "D"
+	CNatural string = "C"
+	CSharp   string = "C#"
+	DFlat    string = "Db"
+	DNatural string = "D"
 	Dsharp   string = "D#"
 	Eflat    string = "Eb"
 	Enatural string = "E"
@@ -56,10 +56,10 @@ type TimeSignature struct {
 }
 
 var NoteMap map[string]*Note = map[string]*Note{
-	Cnatural: &C,
-	Csharp:   &Db,
-	Dflat:    &Db,
-	Dnatural: &D,
+	CNatural: &C,
+	CSharp:   &Db,
+	DFlat:    &Db,
+	DNatural: &D,
 	Dsharp:   &Eb,
 	Eflat:    &Eb,
 	Enatural: &E,

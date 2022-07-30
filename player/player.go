@@ -2,6 +2,7 @@ package player
 
 import (
 	"fmt"
+	"io/ioutil"
 
 	"github.com/faiface/beep"
 	"github.com/j3fflan3/arpeggiator/g9"
@@ -39,12 +40,15 @@ func LoadSong(songFile string) {
 func PrintTestSongYaml() {
 	song := Song{}
 	chords := []ChordEvent{}
-	song.Key = "C"
-	song.Tempo = 110
-	song.TimeSignature = g9.TimeSignature{Numerator: g9.Quarter, Denominator: g9.Quarter}
+	song.Key = g9.CNatural
+	song.Tempo = 111
+	song.TimeSignature = g9.TimeSignature{
+		Numerator:   g9.Quarter,
+		Denominator: g9.Quarter,
+	}
 	song.Title = "Mary Had a Little Lamb"
 
-	g9.NoteDuration.SetDuration(g9.Quarter, 110)
+	g9.NoteDuration.SetDuration(g9.Quarter, 111)
 	song.Chords = chords
 	song.Notes = maryNotes()
 
@@ -54,6 +58,10 @@ func PrintTestSongYaml() {
 		return
 	}
 	fmt.Println(string(b))
+	e := ioutil.WriteFile("testsong.yaml", b, 0777)
+	if e != nil {
+		fmt.Println(e.Error())
+	}
 }
 
 func maryNotes() []NoteEvent {
