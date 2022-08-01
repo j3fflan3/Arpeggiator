@@ -26,7 +26,7 @@ func main() {
 	if err = song.Initialize(); err == nil {
 		s := song.ToStream()
 		title := strings.ReplaceAll(song.Title, " ", "_")
-		name := fmt.Sprintf("%v_%v.wav", title, song.Tempo)
+		name := fmt.Sprintf("%v_%vbpm.wav", title, song.Tempo)
 		f, err := os.Create(name)
 		if err != nil {
 			fmt.Println(err)
@@ -43,9 +43,4 @@ func main() {
 
 		return
 	}
-
-	// err = song.Play()
-	// if err != nil {
-	// 	log.Fatalf("error playing song: %v", err.Error())
-	// }
 }
