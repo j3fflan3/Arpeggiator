@@ -1,0 +1,216 @@
+# Test song for player.
+title: "Mary Had a Little Lamb"
+key: "C"
+tempo: 113.5
+timesignature:
+    numerator: "quarter"    # 4
+    denominator: "quarter"  # 4
+melody:
+  - note: "E"
+    octave: 4
+    duration: "eighth"
+  - note: "D"
+    octave: 4
+    duration: "eighth"
+  - note: "C"
+    octave: 4
+    duration: "eighth"
+  - note: "D"
+    octave: 4
+    duration: "eighth"
+  - note: "E"
+    octave: 4
+    duration: "eighth"        
+  - note: "E"
+    octave: 4
+    duration: "eighth"        
+  - note: "E"
+    octave: 4
+    duration: "quarter"                
+  - note: "D"
+    octave: 4
+    duration: "eighth"        
+  - note: "D"
+    octave: 4
+    duration: "eighth"        
+  - note: "D"
+    octave: 4
+    duration: "quarter"
+  - note: "E"
+    octave: 4
+    duration: "eighth"        
+  - note: "G"
+    octave: 4
+    duration: "eighth"        
+  - note: "G"
+    octave: 4
+    duration: "quarter"                
+  - note: "E"
+    octave: 4
+    duration: "eighth"
+  - note: "D"
+    octave: 4
+    duration: "eighth"
+  - note: "C"
+    octave: 4
+    duration: "eighth"
+  - note: "D"
+    octave: 4
+    duration: "eighth"
+  - note: "E"
+    octave: 4
+    duration: "eighth"        
+  - note: "E"
+    octave: 4
+    duration: "eighth"        
+  - note: "E"
+    octave: 4
+    duration: "eighth"        
+  - note: "E"
+    octave: 4
+    duration: "eighth"        
+  - note: "D"
+    octave: 4
+    duration: "eighth"        
+  - note: "D"
+    octave: 4
+    duration: "eighth"        
+  - note: "E"
+    octave: 4
+    duration: "eighth"        
+  - note: "D"
+    octave: 4
+    duration: "eighth"        
+  - note: "C"
+    octave: 4
+    duration: "half"
+  - note: "rest"
+    octave: 0
+    duration: "half"
+chords: 
+  - chord:
+    - note: "C"
+      octave: 3
+    - note: "E"
+      octave: 3
+    - note: "G"
+      octave: 3
+    - note: "C"
+      octave: 4   
+    - note: "E"
+      octave: 4   
+    duration: "whole"
+  - chord:
+    - note: "G"
+      octave: 2
+    - note: "D"
+      octave: 3
+    - note: "G"
+      octave: 3
+    - note: "B"
+      octave: 3
+    - note: "D"
+      octave: 4
+    - note: "G"
+      octave: 4
+    duration: "half"
+  - chord:
+    - note: "C"
+      octave: 3
+    - note: "E"
+      octave: 3
+    - note: "G"
+      octave: 3
+    - note: "C"
+      octave: 4   
+    - note: "E"
+      octave: 4   
+    duration: "half"
+  - chord:
+    - note: "C"
+      octave: 3
+    - note: "E"
+      octave: 3
+    - note: "G"
+      octave: 3
+    - note: "C"
+      octave: 4   
+    - note: "E"
+      octave: 4   
+    duration: "quarter"
+  - chord:
+    - note: "B"
+      octave: 2
+    - note: "D"
+      octave: 3
+    - note: "G"
+      octave: 3
+    - note: "D"
+      octave: 4   
+    - note: "G"
+      octave: 4   
+    duration: "quarter"
+  - chord:
+    - note: "A"
+      octave: 2
+    - note: "E"
+      octave: 3
+    - note: "A"
+      octave: 3
+    - note: "C"
+      octave: 4   
+    - note: "E"
+      octave: 4   
+    duration: "quarter"
+  - chord:
+    - note: "A"
+      octave: 2
+    - note: "E"
+      octave: 3
+    - note: "A"
+      octave: 3
+    - note: "C"
+      octave: 4   
+    - note: "E"
+      octave: 4   
+    duration: "quarter"
+  - chord:
+    - note: "D"
+      octave: 3
+    - note: "A"
+      octave: 3
+    - note: "C"
+      octave: 4
+    - note: "F"
+      octave: 4   
+    duration: "quarter"
+  - chord:
+    - note: "G"
+      octave: 2
+    - note: "D"
+      octave: 3
+    - note: "G"
+      octave: 3
+    - note: "B"
+      octave: 3
+    - note: "D"
+      octave: 4
+    - note: "G"
+      octave: 4
+    duration: "quarter"
+  - chord:
+    - note: "C"
+      octave: 3
+    - note: "E"
+      octave: 3
+    - note: "G"
+      octave: 3
+    - note: "C"
+      octave: 4   
+    - note: "E"
+      octave: 4   
+    duration: "half"
+  - chord:
+    - note: "rest"
+      octave: 0
+    duration: "half"
