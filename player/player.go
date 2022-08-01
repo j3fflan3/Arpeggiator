@@ -117,6 +117,7 @@ func (s *Song) RhythmGuitar(rhythm *g9.Guitar) beep.Streamer {
 	return beep.Seq(chordSequence...)
 }
 
+// Print writes a document to the terminal describing the song
 func (s *Song) Print() {
 	fmt.Printf("Title: %v\n", s.Title)
 	fmt.Printf("Key: %v\n", s.Key)
