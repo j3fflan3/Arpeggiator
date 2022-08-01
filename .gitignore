@@ -1,9 +1,11 @@
-# Binaries for programs and plugins
+# Binaries for programs, media files, and plugins
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
+*.wav
+*.aiff
 
 # Test binary, built with `go test -c`
 *.test
