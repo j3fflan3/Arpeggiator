@@ -22,7 +22,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("could not load songFile %v", *songFile)
 	}
-	// song.Print()
+	song.Print()
 	if err = song.Initialize(); err == nil {
 		s := song.ToStream()
 		title := strings.ReplaceAll(song.Title, " ", "_")
@@ -43,4 +43,5 @@ func main() {
 		fmt.Println("Saved.")
 		return
 	}
+	log.Fatalf("something sucked... %v", err)
 }
