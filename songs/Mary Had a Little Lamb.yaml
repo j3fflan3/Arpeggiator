@@ -1,7 +1,7 @@
 # Test song for player.
 title: "Mary Had a Little Lamb"
 key: "C"
-tempo: 113.595
+tempo: 90
 timesignature:
     numerator: "quarter"    # 4
     denominator: "quarter"  # 4

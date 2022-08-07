@@ -10,8 +10,6 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-var Streams []beep.Streamer
-var Sequence []NoteEvent
 var SampleRate int = 44100
 var CurrentSong Song
 
@@ -64,10 +62,10 @@ func (s *Song) Initialize() error {
 }
 
 func (s *Song) ToStream() beep.Streamer {
-	kse1 := karplusstrong.NewExtended(SampleRate, 0.1)
-	lead := g9.NewGuitar(SampleRate, kse1)
-	kse2 := karplusstrong.NewExtended(SampleRate, 0.05)
-	rhythm := g9.NewGuitar(SampleRate, kse2)
+	leadSynth := karplusstrong.NewExtended(SampleRate, 0.1)
+	lead := g9.NewGuitar(SampleRate, leadSynth)
+	rhythmSynth := karplusstrong.NewExtended(SampleRate, 0.05)
+	rhythm := g9.NewGuitar(SampleRate, rhythmSynth)
 	return s.Mixer(lead, rhythm)
 }
 
@@ -99,6 +97,7 @@ func (s *Song) RhythmGuitar(rhythm *g9.Guitar) beep.Streamer {
 		cont := false
 		dur := g9.NoteDuration[g9.NoteType(c.Duration)].Duration
 		var notes []float64
+		// Either it's a rest, or we'll build a chord.
 		for _, n := range c.Chord {
 			if n.Note == g9.Rest {
 				chordSequence = append(chordSequence, rhythm.Silence(dur))

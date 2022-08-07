@@ -32,15 +32,15 @@ func main() {
 			fmt.Println(err)
 			return
 		}
-
 		fmt.Printf("Saving to %s...\n", name)
-		if err = wav.Encode(f, s, beep.Format{SampleRate: beep.SampleRate(player.SampleRate), NumChannels: 2, Precision: 3}); err != nil {
+		if err = wav.Encode(f, s, beep.Format{
+			SampleRate:  beep.SampleRate(player.SampleRate),
+			NumChannels: 2,
+			Precision:   3}); err != nil {
 			fmt.Println(err)
 			return
 		}
-
 		fmt.Println("Saved.")
-
 		return
 	}
 	log.Fatalf("something sucked... %v", err)
