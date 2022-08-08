@@ -12,19 +12,19 @@ const (
 	CSharp   string = "C#"
 	DFlat    string = "Db"
 	DNatural string = "D"
-	Dsharp   string = "D#"
-	Eflat    string = "Eb"
-	Enatural string = "E"
-	Fnatural string = "F"
-	Fsharp   string = "F#"
-	Gflat    string = "Gb"
-	Gnatural string = "G"
-	Gsharp   string = "G#"
-	Aflat    string = "Ab"
-	Anatural string = "A"
-	Asharp   string = "A#"
-	Bflat    string = "Bb"
-	Bnatural string = "B"
+	DSharp   string = "D#"
+	EFlat    string = "Eb"
+	ENatural string = "E"
+	FNatural string = "F"
+	FSharp   string = "F#"
+	GFlat    string = "Gb"
+	GNatural string = "G"
+	GSharp   string = "G#"
+	AFlat    string = "Ab"
+	ANatural string = "A"
+	ASharp   string = "A#"
+	BFlat    string = "Bb"
+	BNatural string = "B"
 	Rest     string = "rest"
 	// Note Duration Types
 	WholeDotted        NoteType = "wholedotted"        // whole note * 1.5
@@ -60,19 +60,19 @@ var NoteMap map[string]*Note = map[string]*Note{
 	CSharp:   &Db,
 	DFlat:    &Db,
 	DNatural: &D,
-	Dsharp:   &Eb,
-	Eflat:    &Eb,
-	Enatural: &E,
-	Fnatural: &F,
-	Fsharp:   &Gb,
-	Gflat:    &Gb,
-	Gnatural: &G,
-	Gsharp:   &Ab,
-	Aflat:    &Ab,
-	Anatural: &A,
-	Asharp:   &Bb,
-	Bflat:    &Bb,
-	Bnatural: &B,
+	DSharp:   &Eb,
+	EFlat:    &Eb,
+	ENatural: &E,
+	FNatural: &F,
+	FSharp:   &Gb,
+	GFlat:    &Gb,
+	GNatural: &G,
+	GSharp:   &Ab,
+	AFlat:    &Ab,
+	ANatural: &A,
+	ASharp:   &Bb,
+	BFlat:    &Bb,
+	BNatural: &B,
 }
 
 // Note octaves and frequencies
