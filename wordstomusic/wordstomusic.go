@@ -116,14 +116,22 @@ func DemoArpeggio() {
 
 // BuildArpeggio
 //
-// 		 phrase []string - The phrase to turn into musical notes
+// phrase []string.  The phrase to turn into musical notes
 //
-//		 sequence []float64 - The rhythm pattern, an array of note lengths (duration) per bar
+// sequence []float64.  The rhythm pattern, an array of note lengths (duration) per bar
 //
-//		 scale []*g9.Note - The slice of scale to use in our sequence
+// scale []*g9.Note.  The slice of *g9.Note to use as the scale for our sequence
 //
-//		 octave []int - The slice of ocatves to apply to Alphabet letters based on scale length
+// octave []int. The slice of ocatves to apply to Alphabet letters based on scale length
 func BuildArpeggio(phrase []string, sequence []float64, scale []*g9.Note, octaves []int, filename string) error {
+
+	sortedScale := func(octs []int) []float64 {
+		return []float64{0}
+	}(octaves)
+	sort.Slice(sortedScale, func(i, j int) bool {
+		return sortedScale[i] < sortedScale[j]
+	})
+
 	// min/max length of our scale
 	i, o := 0, 0
 	iMax, oMax := len(scale), len(octaves)
