@@ -7,3 +7,9 @@ func TestPrintWordMap(t *testing.T) {
 	PrintWordMap()
 	t.Log("Done.")
 }
+
+func TestDemoArpeggio(t *testing.T) {
+	t.Log("Demo Arpeggio")
+	DemoArpeggio()
+	t.Log("Done.")
+}
