@@ -17,6 +17,7 @@ var (
 )
 
 func main() {
+	flag.Parse()
 	song := &player.Song{}
 	err := song.Load(*songFile)
 	if err != nil {
