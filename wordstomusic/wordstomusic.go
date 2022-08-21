@@ -49,6 +49,14 @@ type note struct {
 	Octave int
 }
 
+// WordMap
+//
+// Key value "Letter":
+// Letter's concrete type is string.
+// It represents a letter of the alphabet.
+//
+// Value value "note{}":
+//
 var WordMap map[Letter]note = map[Letter]note{}
 
 // Scale - Default Bm7 b5 +7, ascending. Note names from g9 package (constants)
@@ -96,21 +104,45 @@ func init() {
 	g9.NoteDuration.SetDuration(timeSignature.Denominator, tempo)
 
 	// Load the Demo Scale
-	DemoScale = append(DemoScale, g9.BNatural)
-	//DemoScale = append(DemoScale, g9.CSharp)
+	DemoScale = append(DemoScale, g9.CNatural)
 	DemoScale = append(DemoScale, g9.DNatural)
 	DemoScale = append(DemoScale, g9.ENatural)
-	//DemoScale = append(DemoScale, g9.FNatural)
-	DemoScale = append(DemoScale, g9.FSharp)
 	DemoScale = append(DemoScale, g9.GNatural)
-	//DemoScale = append(DemoScale, g9.ANatural)
-	DemoScale = append(DemoScale, g9.ASharp)
+	DemoScale = append(DemoScale, g9.ANatural)
+	DemoScale = append(DemoScale, g9.BNatural)
 
+	// DemoDuration = append(DemoDuration, g9.Quarter)
+	// DemoDuration = append(DemoDuration, g9.Quarter)
+	// DemoDuration = append(DemoDuration, g9.Quarter)
+	// DemoDuration = append(DemoDuration, g9.Quarter)
+	// DemoDuration = append(DemoDuration, g9.Fifth)
+	// DemoDuration = append(DemoDuration, g9.Fifth)
+	// DemoDuration = append(DemoDuration, g9.Fifth)
+	// DemoDuration = append(DemoDuration, g9.Fifth)
+	// DemoDuration = append(DemoDuration, g9.Fifth)
+	// DemoDuration = append(DemoDuration, g9.Eighth)
+	// DemoDuration = append(DemoDuration, g9.Sixth)
+	// DemoDuration = append(DemoDuration, g9.Eighth)
+	// DemoDuration = append(DemoDuration, g9.Sixth)
+	// DemoDuration = append(DemoDuration, g9.Twelfth)
+	// DemoDuration = append(DemoDuration, g9.Sixth)
+	// DemoDuration = append(DemoDuration, g9.Twelfth)
+	// DemoDuration = append(DemoDuration, g9.Quarter)
+	// DemoDuration = append(DemoDuration, g9.Twelfth)
+	// DemoDuration = append(DemoDuration, g9.Quarter)
+	// DemoDuration = append(DemoDuration, g9.Eighth)
+	// DemoDuration = append(DemoDuration, g9.Eighth)
+	// DemoDuration = append(DemoDuration, g9.Twelfth)
+	// DemoDuration = append(DemoDuration, g9.Twelfth)
+	// DemoDuration = append(DemoDuration, g9.Twelfth)
 	DemoDuration = append(DemoDuration, g9.Quarter)
 	DemoDuration = append(DemoDuration, g9.Quarter)
-	DemoDuration = append(DemoDuration, g9.Sixth)
-	DemoDuration = append(DemoDuration, g9.Sixth)
-	DemoDuration = append(DemoDuration, g9.Sixth)
+	DemoDuration = append(DemoDuration, g9.Quarter)
+	DemoDuration = append(DemoDuration, g9.Quarter)
+	DemoDuration = append(DemoDuration, g9.Quarter)
+	DemoDuration = append(DemoDuration, g9.Quarter)
+	DemoDuration = append(DemoDuration, g9.Quarter)
+	DemoDuration = append(DemoDuration, g9.Quarter)
 
 }
 
@@ -131,15 +163,26 @@ func SetDuration(bpm float64) {
 // Note that len(demoPhrase) equals the total note duration of 2 bars
 // with our rhythm pattern.
 func DemoArpeggio() {
-	SetDuration(161)
+	SetDuration(162)
+	// demoPhrase := []string{
+	// 	"h", "e", "l", "l", "o", "w", "o", "r", "l", "d",
+	// }
+
+	// demoPhrase := []string{
+	// 	"h", "o", "l", "a", "m", "u", "n", "d", "o",
+	// }
+
+	// demoPhrase := []string{
+	// 	"a", "w", "o", "l", "f", "i", "n", "t", "h", "e", "s", "t", "o", "r", "y",
+	// }
 	demoPhrase := []string{
-		"h", "e", "l", "l", "o", "w", "o", "r", "l", "d",
+		"l", "u", "n", "a", "l", "a", "n", "e",
 	}
-	octaves := []int{3, 2, 3}
+	octaves := []int{4, 3, 4, 3, 4, 2}
 	filepath := "../arpeggios/"
 	span := 2
 	bars := 16
-	err := BuildArpeggio(demoPhrase, DemoScale, DemoDuration, octaves, span, bars, "Bm", filepath, "helloworld")
+	err := BuildArpeggio(demoPhrase, DemoScale, DemoDuration, octaves, span, bars, "Bm", filepath, "luna2")
 	if err != nil {
 		fmt.Println(err)
 	}
