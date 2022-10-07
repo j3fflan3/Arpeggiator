@@ -334,16 +334,22 @@ time signature denominator and the tempo (BPM).  It returns an error if
 the denominator is an unknown note or if the denominator's numeric value
 is not even.
 
-Tempo and Note Duration Calculation
+Tempo and Note Duration Calculation:
 
 To get the duration of the denominator (lower number) in a time signature, you need to perform the following calculation:
 
 denominatorDuration = 60 / bpm
 
-To extrapolate the duration of other note types, you need to use this calculation. If note type is not a denominator (eg dotted or triplet), calculate the numeric divisor by dividing the notes decimal representation (e.g., dotted whole = 1.5) by 1.
+To extrapolate the duration of other note types, you need to use this calculation: 
 
-Example: To calculate a dotted whole note divisor, divide the dotted whole's numeric representation by 1:
-1.5 / 1 = 0.666666666666667
+If note type is not a denominator (eg dotted or triplet), calculate the numeric divisor by dividing the notes decimal 
+representation (e.g., dotted whole = 1.5) by 1.
+
+Example: To calculate a dotted whole note divisor, divide 1 by the dotted whole's numeric representation:
+1 / 1.5  = 0.666666666666667    // Almost the number of the beast :) Up the Irons!
+
+Another example...  to calculate a quarter note divisor, divide 1 by the the quarter note's numeric representation:
+1 / 4 = .25
 
 Now we need a calculation to determine the target note's duration.
 
